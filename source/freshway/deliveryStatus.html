@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+    <meta name="robots" content="noindex">
+    <title>CJ Freshway 기사용 앱</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/script.js"></script>    
+</head>
+<body class="back_white back_gradient">
+    <header class="title_bar">
+        <div class="tit">김철수님 <span class="color_green">안전운전하세요</span></div>
+        <div class="btn_group">
+            <!--클래스 추가 : 기본은 업무전, working 업무중, done 업무종료, before 업무전 흰색아이콘-->
+            <button type="button" class="btn_work_status done">업무관리</button>
+            <button type="button" class="btn_logout white">종료</button>
+        </div>
+    </header>
+    <section class="delivery_status">
+        <form action="" method="">
+            <div class="search">
+                <div>
+                    <label>배송일자
+                        <input type="text" id="delivery_date" class="date-style"  value="2015-07-04" readonly>
+                    </label>
+                </div>
+                <div>
+                    <label for="delivery_num">배송회차
+                        <select name="" id="delivery_num">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+            <div class="delivery_score">
+                <ul>
+                    <li>전체<span>30</span>
+                        <p class="total_amount">총주문<em>300</em></p>
+                    </li>
+                    <li>완료<span>01</span></li>
+                    <li>미완료<span>29</span></li>
+                </ul>
+            </div>
+            <!--상태에 따른 클래스 추가 : 클래스없는 기본이 예정, 완료 done, 출발 start, 도착 arrival, 레드존 redzone -->
+            <article class="done">
+                <div class="delivery_order">
+                    <p class="order">01</p>
+                    <p class="status">완료</p>
+                    <p class="face_inspect">대면검수</p>
+                    <!-- <p class="claim">클레임<br>이력</p> -->
+                </div>
+                <div class="delivery_time customer">
+                    <div class="customer">
+                        <p class="tit">이천센터</p><button type="button" class="btn_detail btn_custome">상세정보 보기</button>
+                    </div>
+                    <!-- <div class="customer_detail custome_list">
+                        <p class="list_tit">하위 거래처</p>
+                        <p class="list_item">롯데칠성음료(주), 롯데칠성음료2, 거래처3</p>
+                    </div> -->
+                    <div class="customer_detail custome_list">
+                        롯데칠성음료(주), 거래처3, 롯데칠성음료
+                    </div>
+                    <p class="otd"><span>OTD</span> 18:10 ~ 18:20</p>
+                    <p class="expect_time"><span>도착예정시간</span> 18:15</p>
+                    <p class="time"><span>도착</span>18:10 <span>출발</span>18:21</p>                    
+                </div>
+                <nav class="delivery_work">
+                    <ul>
+                        <li class="navi"><a href="#a">내비게이션</a></li>
+                        <li class="notice"><a href="#a">업무전달</a></li>
+                        <li class="detail"><a href="productDetail.html">상품상세</a></li>
+                        <li class="inspect"><a href="#a">하차검수</a></li>
+                        <li class="load"><a href="customerLoading.html">거래처적재</a></li>
+                    </ul>
+                </nav>         
+            </article> 
+
+            <article class="start redzone">
+                <div class="delivery_order">
+                    <p class="order">02</p>
+                    <p class="status">출발</p>
+                    <p class="face_inspect">대면검수</p>
+                    <p class="claim">
+                        <span class="color_darkRed">배송지연 <em>2</em>건</span>
+                        <span>적재불량 <em>2</em>건</span>
+                        <span class="color_redYellow">배송서비스 <em>1</em>건</span>
+                    </p>
+                </div>
+                <div class="delivery_time">
+                    <div class="customer">
+                        <p class="tit">(주)호산(송유관관공사앞에 필립병원 abcdefghi</p><button type="button" class="btn_detail btn_custome">상세정보 보기</button>
+                    </div>     
+                    <div class="customer_detail custome_list">
+                        롯데칠성음료(주), 거래처3
+                    </div>
+                    <p class="otd"><span>OTD</span> 18:20 ~ 18:30</p>
+                    <p class="expect_time"><span>도착예정시간</span> 18:35</p>
+                    <p class="time"><span>도착</span>18:33 <span>출발</span>18:35</p>
+                </div>
+                <nav class="delivery_work">
+                    <ul>
+                        <li class="navi"><a href="#a">내비게이션</a></li>
+                        <li class="notice"><a href="#a"><span class="new">2</span>업무전달</a></li>
+                        <li class="detail"><a href="productDetail.html">상품상세</a></li>
+                        <li class="inspect done"><a href="#a">하차검수</a></li>
+                        <li class="load"><a href="customerLoading.html">거래처적재</a></li>
+                    </ul>
+                </nav>         
+            </article>
+
+            <article class="arrival">
+                <div class="delivery_order">
+                    <p class="order">03</p>
+                    <p class="status">도착</p>
+                    <p class="face_inspect">대면검수</p>
+                    <p class="claim">
+                        <span class="color_darkRed">배송지연 <em>2</em>건</span>
+                        <span>적재불량 <em>2</em>건</span>
+                        <span class="color_redYellow">배송서비스 <em>1</em>건</span>
+                    </p>
+                </div>
+                <div class="delivery_time">
+                    <div class="customer">
+                        <p class="tit">(주)호산(송유관관공사앞에 필립병원 abcd efghi</p><button type="button" class="btn_detail btn_custome">상세정보 보기</button>
+                    </div> 
+                    <div class="customer_detail custome_list">
+                        롯데칠성음료(주), 거래처3
+                    </div>
+                    <p class="otd"><span>OTD</span> 18:20 ~ 18:30</p>
+                    <p class="expect_time"><span>도착예정시간</span> 18:35</p>
+                    <p class="time"><span>도착</span>18:33 <span>출발</span>18:35</p>
+                </div>
+                <nav class="delivery_work">
+                    <ul>
+                        <li class="navi"><a href="#a">내비게이션</a></li>
+                        <li class="notice"><a href="#a"><span class="new">2</span>업무전달</a></li>
+                        <li class="detail"><a href="productDetail.html">상품상세</a></li>
+                        <li class="inspect done"><a href="#a">하차검수</a></li>
+                        <li class="load"><a href="customerLoading.html">거래처적재</a></li>
+                    </ul>
+                </nav>         
+            </article>            
+
+            <article>
+                <div class="delivery_order">
+                    <p class="order">04</p>
+                    <p class="status">예정</p>
+                    <p class="face_inspect">대면검수</p>
+                    <!-- <p class="claim">클레임<br>이력</p> -->
+                </div>
+                <div class="delivery_time">
+                    <div class="customer">
+                        <p class="tit">분당재생한방병원</p><button type="button" class="btn_detail btn_custome">상세정보 보기</button>
+                    </div> 
+                    <div class="customer_detail custome_list">
+                        롯데칠성음료(주)
+                    </div>                    
+                    <p class="otd"><span>OTD</span> 18:30 ~ 18:40</p>
+                    <p class="expect_time"><span>도착예정시간</span> 18:35</p>
+                    <p class="time"><button type="button" class="btn_arrival">도착</button><button type="button" class="btn_start">출발</button></p>
+                </div>
+                <nav class="delivery_work">
+                    <ul>
+                        <li class="navi"><a href="#a">내비게이션</a></li>
+                        <li class="notice"><a href="#a"><span class="new">5</span>업무전달</a></li>
+                        <li class="detail"><a href="productDetail.html">상품상세</a></li>
+                        <li class="inspect"><a href="#a">하차검수</a></li>
+                        <li class="load"><a href="customerLoading.html">거래처적재</a></li>
+                    </ul>
+                </nav>         
+            </article>                        
+        </form>   
+    </section>
+    <nav class="tabbar">
+        <ul>
+            <li class="cusomer_info"><a href="#a">거래처납품정보</a></li>
+            <li class="load_inspect"><a href="#a">상차검수</a></li>
+            <li class="delivery_status on"><a href="deliveryStatus.html">배송진행현황</a></li>
+            <!-- <li class="drop_insepct"><a href="#a">하차검수</a></li> -->
+            <li class="vendor_collect"><a href="#a">벤더집하</a></li>
+        </ul>
+    </nav>  
+    
+
+    <!--거래처적재 : 유형선택 팝업-->
+    <div class="popup customer_load" style="display:none">
+        <div>
+            <div class="popup_tit">이천센터</div>
+            <div class="popup_content">
+                <div class="load_category">
+                    <label class="radio_wrap">
+                        <input type="radio" name="chk1" value="" checked/>
+                        <div class="radio_lbl">대면인계</div>
+                    </label>
+                    <label class="radio_wrap">
+                        <input type="radio" name="chk1" value="" />
+                        <div class="radio_lbl">적온적재</div>
+                    </label>
+                    <label class="radio_wrap">
+                        <input type="radio" name="chk1" value="" />
+                        <div class="radio_lbl">적온적재<br>미준수</div>
+                    </label>
+                </div>
+            </div>
+            <div class="btn_group">
+                <button type="button" class="btn_popup_cancel">취 소</button>
+                <button type="button" class="btn_popup_confirm">확 인</button>
+            </div>
+        </div>        
+    </div>
+    
+</body>
+</html>

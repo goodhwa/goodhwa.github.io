@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">    
+    <title>셔틀비</title>
+
+    <link rel="stylesheet" href="css/swiper.min.css">    
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/jquery-3.5.1.min.js"></script>
+    <script defer src="js/swiper.min.js"></script>
+    <script defer src="js/style.js"></script>    
+</head>
+<body>
+    <header>
+        <h1><a href="index.html"><img src="img/logo.png" alt="셔틀비"></a></h1>
+        <a href="#a" class="menu-triger"><span></span></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="parents.html">Parents</a></li>
+                <li><a href="academy.html">Academy</a></li>
+                <li><a href="community.html">Community</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="location">
+            <div>
+                <p class="loc">HOME > LOCATION</p>
+                <h3>오시는길</h3>
+                <div>
+                    <!-- * 카카오맵 - 지도퍼가기 -->
+                    <!-- 1. 지도 노드 -->
+                    <div id="daumRoughmapContainer1604539256028" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+                    <!--
+                        2. 설치 스크립트
+                        * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+                    -->
+                    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+                    <!-- 3. 실행 스크립트 -->
+                    <script charset="UTF-8">
+                        new daum.roughmap.Lander({
+                            "timestamp" : "1604539256028",
+                            "key" : "22sve",
+                            "mapWidth" : "640",
+                            "mapHeight" : "500"
+                        }).render();
+                    </script>
+                </div>
+                <article>
+                    <ul>
+                        <li><em>주소</em>
+                            <p>(06160) 서울특별시 강남구 테헤란로 419, 강남파이낸스플라자 1522호</p>
+                        </li>
+                        <li><em>TEL/FAX</em>
+                            <p>02-6954-0127 / 02-539-5412</p>
+                        </li>
+                        <li><em>EMAIL</em>
+                            <p>admin@shuttleb.com</p>
+                        </li>
+                    </ul>                    
+                    <ul>
+                        <li><em>지하철</em>
+                            <p>선릉역 10번출구로 나오신 후 도보로 약 3분 소요</p>
+                        </li>
+                        <li><em>버스</em>
+                            <p>파란버스 146, 333, 341, 360, 740<br/>
+                                빨간버스 1100, 1700, 2000, 2000-1, 7007, 9303, 8001, M6450 선릉역에서 하차</p>
+                        </li>
+                        <li><em>자가용</em>
+                            <p>강남파이낸스플라자 지하 주차장 사용 가능, 방문객 1시간 무료 주차</p>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+    </main>
+    <a href="" class="btn-top">TOP</a>
+    <footer>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="location.html">오시는길</a></li>
+                    <li><a href="usepolicy.html">개인정보처리방침</a></li>
+                </ul>
+            </nav>
+            <h6>셔틀비(ShuttleB Co., Ltd)</h6>
+            <address>
+                <span>서울특별시 강남구 테헤란로 419, 강남파이낸스플라자 1522호</span>
+                <span>대표전화 : 02-6954-0127</span> 
+                <span>팩스번호 : 02-539-5412</span>  
+                <span>이메일 : help@shuttleb.com</span>   
+                <span>대표자명 : 이상협</span>   
+                <span>사업자등록번호 : 483-87-01753</span>    
+            </address>
+            <p>Copyright 2020 ShuttleB Co., Ltd. All right reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

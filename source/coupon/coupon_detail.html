@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="noindex">
+    <meta name="format-detection" content="telephone-no">
+    <meta name="msapplication-tap-highlight" content="no" />
+    <title>Friends Market App</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/style.js"></script>
+</head>
+
+<body>
+    <header class="sticky">
+        <button class="btnBack">뒤로가기</button>
+        <div class="srch">
+            <fieldset>
+                <form action="">
+                    <input type="search" placeholder="">
+                    <span class="magnify"></span>
+                </form>
+            </fieldset>
+        </div>
+        <div class="cart"><a href="#">보관함<span>2</span></a></div>
+    </header>
+    <main>
+        <section class="contents">
+            <div class="coupon_detail">
+                <div class="detail_img">
+                    <img src="img/sample@2x.png" alt="">
+                </div>
+                <div class="thumb_txt">
+                    <a href="coupon_detail.html">
+                        <span class="brand">스타벅스</span>
+                        <h5>아이스 카라멜 마키아또 Tall4</h5>
+                        <!-- 할인쿠폰일 경우
+                        <div class="discount">
+                            <em>10</em><span>% 할인쿠폰</span>
+                        </div> -->
+                        <!-- 상품권일 경우
+                        <div class="giftcard">
+                            <em>10,000</em><span>원 상품권</span>
+                        </div>
+                        -->
+                        <div class="price">
+                            <em>4,980</em><span>원</span>
+                            <span class="origin">5,600</span>
+                        </div>
+                        <span class="period"><em>사용기간 : </em> 19.03.27~19.04.23</span>
+                    </a>
+                </div>
+                <div class="coupon_info">
+                    <p><img src="https://via.placeholder.com/500" alt="쿠폰이미지"></p>
+                    <p><img src="https://via.placeholder.com/500" alt="상세이미지"></p>
+                    <h6>상품정보</h6>
+                    <ul>
+                        <li><em>쿠폰명 : </em>아이스 카라멜마키아또 Tall</li>
+                        <li class="info_guide"><em>주요정보 </em>
+                            - 현장 방문하여 당일 사용 가능합니다.<br>
+                            - 쿠폰 사용 시 별별포인트 2%가 적립됩니다.<br>
+                            - 타 이벤트 중복할인 불가합니다.<br>
+                            - 쿠폰 사용 시 직원에게 보여주셔야 합니다. </li>
+                    </ul>
+                    <h6>가맹점 정보</h6>
+                    <table>
+                        <tr>
+                            <th scope="row">가맹점명</th>
+                            <td>벨라체스파</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">주 소</th>
+                            <td>서울 강남구 도산대로55길 22 (청담동)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">연락처</th>
+                            <td>031-456-8462</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <!-- * 카카오맵 - 지도퍼가기 -->
+                                <!-- 1. 지도 노드 -->
+                                <div id="daumRoughmapContainer1584419650321"
+                                    class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+                                <!--
+                                2. 설치 스크립트
+                                * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+                            -->
+                                <script charset="UTF-8" class="daum_roughmap_loader_script"
+                                    src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+                                <!-- 3. 실행 스크립트 -->
+                                <script charset="UTF-8">
+                                    new daum.roughmap.Lander({
+                                        "timestamp": "1584419650321",
+                                        "key": "xiw3",
+                                        "mapWidth": "640",
+                                        "mapHeight": "240"
+                                    }).render();
+                                </script>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="purchase">
+                    <div class="count">
+                        <a href="#" class="countMinus">수량 빼기</a>
+                        <input type="number" title="수량" value="1" class="countNum">
+                        <a href="#" class="countPlus">수량 더하기</a>
+                    </div>                    
+                    <!-- 할인쿠폰일 경우
+                    <div class="btnPurch">
+                        <a href="basket.html" class="w100">보관</a>
+                    </div>  -->
+                    <div class="btnPurch">
+                        <a href="#">보관</a>
+                        <a href="payment.html">구매하기</a>
+                    </div>                 
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="term.html">이용약관</a></li>
+            <li><a href="policy.html">개인정보처리방침</a></li>
+        </ul>
+        <div>
+            <p>상호명 : <span>웹비아이코리아 주식회사</span></p>
+            <p>대표이사 : <span>송경자</span></p>
+            <p>주소 : <span>(13516) 경기도 성남시 분당구 판교로 700, D동 310-1호 (야탑동, 분당테크노파크)</span></p>
+            <p>사업자등록번호 : <span>205-81-42884</span></p>
+            <p>통신판매업신고번호 : <span>2019-성남분당B-0718</span></p>
+            <p>대표이메일 : <span>webbikorea77@gmail.com</span></p>
+            <p>고객센터 : <span>031-707-9457</span></p>
+        </div>
+    </footer>
+</body>
+
+</html>

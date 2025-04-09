@@ -1,0 +1,30 @@
+<svg width="280" height="280" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="140" cy="140" r="140" fill="white"/>
+<g filter="url(#filter0_f_491_20432)">
+<ellipse cx="202" cy="187.999" rx="19" ry="12" fill="#F5B0B0"/>
+</g>
+<g filter="url(#filter1_f_491_20432)">
+<ellipse cx="80" cy="187.999" rx="19" ry="12" fill="#F5B0B0"/>
+</g>
+<path d="M195.198 160.596C195.476 167.331 190.218 173.031 183.478 173.286C176.743 173.564 171.048 168.329 170.788 161.565C170.51 154.83 175.745 149.135 182.509 148.876C189.243 148.598 194.944 153.856 195.198 160.596Z" fill="#7C6656"/>
+<path d="M89.5645 153.889L111.22 163.42L93.4545 167.248" stroke="#7C6656" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M163.309 188.218L119.385 189.491C119.385 189.491 116.754 221.977 139.023 225.272C161.291 228.568 169.129 208.574 163.285 188.223L163.309 188.218Z" fill="#F29AA0" stroke="#7C6656" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M92.1041 75.915C92.1041 75.915 87.6863 108.213 139.967 125.609" stroke="#7C6656" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M80.5438 94.9375C80.5438 94.9375 50.6954 113.227 44.332 144.174" stroke="#7C6656" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M195.562 126.25C195.562 126.25 159.007 115.835 146.234 82.9424" stroke="#7C6656" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M129.55 57.9927C129.55 57.9927 114.191 64.1272 115.198 76.0528C115.976 85.2088 120.531 89.1687 135.776 97.0199C151.02 104.871 179.038 90.5192 193.252 71.7953C182.105 61.1286 162.237 40.8024 129.573 57.9698L129.55 57.9927Z" fill="#1AAF92"/>
+<path d="M119.843 85.9865C119.843 85.9865 152.599 125.059 193.846 71.0394C193.846 71.0394 161.411 32.9049 118.035 65.1109" stroke="#7C6656" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M156.261 74.9752C156.284 75.4787 124.215 85.9165 106.27 67.6504" stroke="#7C6656" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<filter id="filter0_f_491_20432" x="175" y="167.999" width="54" height="40" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="4" result="effect1_foregroundBlur_491_20432"/>
+</filter>
+<filter id="filter1_f_491_20432" x="53" y="167.999" width="54" height="40" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="4" result="effect1_foregroundBlur_491_20432"/>
+</filter>
+</defs>
+</svg>
