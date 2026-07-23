@@ -73,7 +73,7 @@ table.tbl th:last-child, table.tbl td:last-child {border-right:none}
     article {padding:16px; margin-bottom:50px; border-radius:16px;}
 
     button[class^='btn'] {padding:0 10px; /*height:45px; line-height:45px;*/ font-size:14px}
-    dl dt, .tit, .koelsa:before, .koelsa:after {font-size:16px !important; }
+    dl dt, .tit, .agency:before, .agency:after {font-size:16px !important; }
     select, input {height:45px}
 
     table colgroup col {display:block; width:100%;}
@@ -778,10 +778,10 @@ button[class^='btn_zoom']:hover {border:none; background:none; box-shadow:none}
 .process.design dl {position:relative; z-index:2}
 .process.design dt, .process.design .dt {font-size:20px; text-align:left;}
 .process.design .dt {display:inline-block; font-weight:400; }
-.process.design .koelsa, .process.factory .koelsa, .process.safe_test .koelsa {position:relative; z-index:1}
-.process.design .koelsa:before, .process.factory .koelsa:before, .process.safe_test .koelsa:before {content:'공단'; position:absolute; left:0; top:40%; font-size:20px; font-weight:500;}
-.process.safe_test .koelsa:before {top:10%}
-.process.factory .koelsa:after, .process.safe_test .koelsa:after {content:'신청인'; position:absolute; left:0; bottom:5%; font-size:22px; font-weight:400;} 
+.process.design .agency, .process.factory .agency, .process.safe_test .agency {position:relative; z-index:1}
+.process.design .agency:before, .process.factory .agency:before, .process.safe_test .agency:before {content:'공단'; position:absolute; left:0; top:40%; font-size:20px; font-weight:500;}
+.process.safe_test .agency:before {top:10%}
+.process.factory .agency:after, .process.safe_test .agency:after {content:'신청인'; position:absolute; left:0; bottom:5%; font-size:22px; font-weight:400;} 
 
 @media (max-width:1400px) {    
     .category .tit:after {width:0}
@@ -805,16 +805,16 @@ button[class^='btn_zoom']:hover {border:none; background:none; box-shadow:none}
     .process li:last-child dd img {max-width:60%}
     .process.design:after {left:auto; top:0; right:0; width:calc(100% - 360px); height:100%}
     .process.design dt, .process.design .dt {margin-bottom:10px; font-size:18px}
-    .process.design .koelsa {padding-top:40px}    
-    .process.design .koelsa:before {top:0; left:20%; font-size:18px}   
-    .process.design .koelsa + dl {position:absolute; right:30px; top:110px; width:40%}
-    .process.design .koelsa:before, .process.factory .koelsa:before, .process.safe_test .koelsa:before, .process.factory .koelsa:after, .process.safe_test .koelsa:after {font-size:18px}
+    .process.design .agency {padding-top:40px}    
+    .process.design .agency:before {top:0; left:20%; font-size:18px}   
+    .process.design .agency + dl {position:absolute; right:30px; top:110px; width:40%}
+    .process.design .agency:before, .process.factory .agency:before, .process.safe_test .agency:before, .process.factory .agency:after, .process.safe_test .agency:after {font-size:18px}
     .process.factory .img_mobile, .process.safe_test .img_mobile {margin:auto}
     .process.factory:after {height:25%}
     .process.safe_test:after {height:35%;}
 }
 @media (max-width:900px) {
-    .process.design .koelsa + dl {width:28%}
+    .process.design .agency + dl {width:28%}
 }
 @media (max-width:768px) {    
     .explan {margin-bottom:10px}
@@ -834,15 +834,15 @@ button[class^='btn_zoom']:hover {border:none; background:none; box-shadow:none}
     .category dt:after, .category dd:after {width:0}
     .category dd ul {font-size:14px}
     .process.design:after {width: calc(100% - 340px);}
-    .process.design .koelsa + dl {top:60px; }
-    .process.factory .koelsa:before {top:21%}
-    .process.factory .koelsa:after {bottom:-3%}
-    .process.safe_test .koelsa:before {top:45%}
-    .process.safe_test .koelsa:after {left:50%; transform:translate(-50%, 0); -ms-transform:translate(-50%, 0)}    
+    .process.design .agency + dl {top:60px; }
+    .process.factory .agency:before {top:21%}
+    .process.factory .agency:after {bottom:-3%}
+    .process.safe_test .agency:before {top:45%}
+    .process.safe_test .agency:after {left:50%; transform:translate(-50%, 0); -ms-transform:translate(-50%, 0)}    
 }
 @media (max-width:700px) {
-    .process.design .koelsa:after {content:'신청인'; position:absolute; top:0; right:5%; font-weight:500}
-    .process.design .koelsa + dl {position:relative; top:0; left:0px; width:100%; padding:16px}
+    .process.design .agency:after {content:'신청인'; position:absolute; top:0; right:5%; font-weight:500}
+    .process.design .agency + dl {position:relative; top:0; left:0px; width:100%; padding:16px}
 }
 /* @media (min-width:448px) and (max-width:570px) {
     .category dd.sublist {width:160px}
@@ -850,8 +850,8 @@ button[class^='btn_zoom']:hover {border:none; background:none; box-shadow:none}
 @media (max-width:425px) {
     .process h5 br {display:block}
     .process.design:after {width:30%;}
-    .process.factory .koelsa:after {bottom:-8%}
-    .process.safe_test .koelsa:before {left:-5px}
+    .process.factory .agency:after {bottom:-8%}
+    .process.safe_test .agency:before {left:-5px}
 }
 
 /* 안전인증 _ 안전인증 수수료 */

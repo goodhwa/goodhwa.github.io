@@ -143,7 +143,7 @@
 }
 
 
-/* freshway */
+/* logistics app */
 .freshway {background-color:#72d39e;}
 .freshway .erp {border-radius:0 0 8rem 8rem; background-color:#defbeb;}
 .freshway .erp + .mobile {margin-top:max(-30%,-60rem); }
@@ -187,7 +187,7 @@
     .saas .peaking:before {top:12%}
 }
 
-/* 승강기기술원 */
+/* public agency */
 .elevator {background:#fff url(../images/elevator/elevator_bg.jpg) no-repeat center top / contain;}
 .elevator > section:first-child {padding:min(84rem, 45%) 0 min(30rem, 20%) 0; }
 .elevator .pc figure, .elevator .mobile figure, .elevator .pc .col1.long figure:before, .elevator .mobile figure.long:before {border-color:#d2d2d2}
@@ -202,7 +202,7 @@
 .elevator .mt-minus {padding-top:0; margin-top:max(-36%,-76rem)}
 
 
-/* 청호 */
+/* field service app */
 .chunho {background:linear-gradient(180deg, #0653a3 0%, #e9f7f8 30%)}
 .chunho .sub-explain.all, .chunho .sub-explain.all em {color:#fff}
 .chunho .erp, .chunho .erp + .col2 {position:relative}
@@ -256,7 +256,7 @@
 .hp .sub-explain.all, .hp .sub-explain em {color:#fff}
 .hp .erp:before {content:''; position:absolute; z-index:-1; top:48%; left:50%; display:block; width:min(192rem, 100vw); height:min(38.5rem, 22.58vw); background:url(../images/hp/hp_bg.png) no-repeat 0 0 / cover; transform:translate(-50%,-50%); opacity:.7}
 .hp .double figure:last-child {margin-top:10%; margin-left:-12%}
-.hp .triphos {background:url(../images/hp/triphos_bg.jpg) no-repeat center top / contain;}
+.hp .company-hp {background:url(../images/hp/company_bg.jpg) no-repeat center top / contain;}
 .hp figure, .hp .col1.long figure:before  {border-color:#111}
 .hp .mt-minus {margin-top:max(-65%,-120rem)}
 .hp .title-txt:after {content:'Company Homepage'; top:26%; left:-32%; width:100%; line-height:1.1; text-align:right; font-size:clamp(6rem, 10.5vw, 20.5rem)}
