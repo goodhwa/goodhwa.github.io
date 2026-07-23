@@ -1,4 +1,4 @@
-# HK.KIM Portfolio (2025)
+﻿# HK.KIM Portfolio (2026)
 
 UI 디자이너·퍼블리셔 개인 포트폴리오 웹사이트입니다.  
 웹/앱 UI 디자인·퍼블리싱 작업물을 케이스 스터디 형태로 정리했습니다.  
@@ -25,7 +25,7 @@ UI 디자이너·퍼블리셔 개인 포트폴리오 웹사이트입니다.
 ## Structure
 
 ```
-2025year/
+2026year/
 ├── index.html          # 메인
 ├── work.html           # 작업 목록
 ├── about.html          # 소개·경력
@@ -73,7 +73,7 @@ UI 디자이너·퍼블리셔 개인 포트폴리오 웹사이트입니다.
 
 ## How to Preview
 
-1. VS Code **Live Server** 등으로 `2025year` 루트를 연다.
+1. VS Code **Live Server** 등으로 `2026year` 루트를 연다.
 2. `index.html`부터 확인한다.
 3. Chrome DevTools로 PC / 모바일 반응형을 함께 본다.
 
