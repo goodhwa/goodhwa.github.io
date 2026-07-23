@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>김화경 포트폴리오</title>
+    <link rel="stylesheet" href="css/xeicon.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="first-columns">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <header class="header">
+            <h1 class="logo"><a href="index.html">HK.KIM</a></h1>
+            <nav class="gnb">
+                <a href="work.html">WORK</a>
+                <a href="about.html">ABOUT</a>
+            </nav>
+        </header>
+        <main>
+            <section class="work-list">
+                <h2 class="title">work</h2>
+                <ul class="tab">
+                    <li class="item" data-filter="all">All</li>
+                    <li class="item" data-filter="design">Design</li>
+                    <li class="item" data-filter="publish">Publish</li>
+                </ul>
+                <div class="inner">
+                    <article data-category="design">
+                        <a href="freshway.html">
+                            <img src="/images/freshway/fw_hover.webp" alt="" class="hover">
+                            <figure>
+                                <img src="/images/main_bann01.webp" alt="물류 웹앱">
+                                <figcaption>cj freshway <span>WebApp Renewal</span></figcaption>
+                            </figure>
+                        </a>
+                    </article>
+                    <article data-category="together">
+                        <a href="hp.html">
+                            <img src="/images/hp/hp_hover.webp" alt="" class="hover">
+                            <figure><img src="/images/triphos.webp" alt="회사 홈페이지">
+                                <figcaption>SME company <span>Responsive Renewal</span></figcaption>
+                            </figure>
+                        </a>
+                    </article>
+                    <article data-category="design">
+                        <a href="saas.html">
+                            <img src="/images/sass/sass.webp" alt="" class="hover">
+                            <figure><img src="/images/sass.webp" alt="erp, 웹앱">
+                                <figcaption>Saas <span>ERP, WebApp</span></figcaption>
+                            </figure>
+                        </a>
+                    </article>
+                    <article data-category="design">
+                        <a href="ilyang.html">
+                            <img src="/images/ilyang/ilyang.webp" alt="" class="hover">
+                            <figure><img src="/images/ilyang.webp" alt="배달 웹앱">
+                                <figcaption>ilyang logis <span>webApp Renewal</span></figcaption>
+                            </figure>
+                        </a>
+                    </article>
+                    <article data-category="together">
+                        <a href="elevator.html">
+                            <img src="/images/elevator/elevator_hover.webp" alt="" class="hover">
+                            <figure>
+                                <img src="/images/elevator.jpg" alt="공공기관 홈페이지">
+                                <figcaption>elevator safety technology institute <span>Homepage Renewal</span></figcaption>
+                            </figure>
+                        </a>
+                    </article>
+                    <article data-category="together">
+                        <a href="chunho.html">
+                            <img src="/images/chunho/chunho_hover.webp" alt="" class="hover">
+                            <figure><img src="/images/chunho.webp" alt="erp, 네이티브앱">
+                                <figcaption>chungho <span>NativeApp</span></figcaption>
+                            </figure>
+                        </a>
+                    </article>
+                    <article data-category="publish">
+                        <a href="school.html">
+                            <img src="/images/school_hover.webp" alt="" class="hover">
+                            <figure><img src="/images/school.webp" alt="웹앱">
+                                <figcaption>hihappyschool <span>WebApp</span></figcaption>
+                            </figure>
+                        </a>
+                    </article>
+                    <article data-category="design">
+                        <a href="cms.html">
+                            <img src="/images/cms/cms_hover.webp" alt="" class="hover">
+                            <figure><img src="/images/erp.webp" alt="erp">
+                                <figcaption>Enterprise Resource Planning System<span>erp</span></figcaption>
+                            </figure>
+                        </a>
+                    </article>
+                    <article data-category="design">
+                        <a href="etc.html">
+                            <img src="/images/etc/etc_hover.webp" alt="" class="hover">
+                            <figure><img src="/images/etc.webp" alt="banner, etc">
+                                <figcaption>banner and etc <span>banner, etc</span></figcaption>
+                            </figure>
+                        </a>
+                    </article>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <button class="btn-top"><i class="xi-long-arrow-up"></i>TOP</button>
+            <div class="inner-box">
+                <p class="title">get in touch</p>
+                <ul class="contact">
+                    <li>010-9014-0091</li>
+                    <li>goodhwa@hanmail.net</li>
+                </ul>
+                <ul class="sitemap">
+                    <li>SITEMAP</li>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="work.html">WORK</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                </ul>
+            </div>
+        </footer>
+        <div class="cursor"></div>
+    </div>    
+
+
+    <script>
+        const tabs = document.querySelector('.tab');
+        const items = document.querySelectorAll('.work-list article');
+
+        tabs.addEventListener('click', (e)=> {
+            const target = e.target;
+            if(target.tagName !== 'LI') return;
+            const filter = target.dataset.filter;
+            items.forEach(item => {
+                const category = item.dataset.category;
+                if(filter == 'all' || category == filter || category == 'together') {
+                    item.classList.remove('hide');
+                } else {
+                    item.classList.add('hide');
+                }
+            })
+        })
+    </script>
+
+</body>
+</html>

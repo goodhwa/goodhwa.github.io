@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>회사 홈페이지</title>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/xeicon.min.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/script.js" defer></script>
+</head>
+<body>
+    <div class="cursor">VIEW</div>
+    <header id="header" class="active">
+        <div class="header-wrap">
+            <h1 class="logo"><a href="index.html">triphos</a></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="about.html">회사소개</a></li>
+                    <li><a href="junryeong.html">사업영역</a>
+                        <ul class="depth2">
+                            <li><a href="junryeong.html">솔루션&플랫폼</a></li>
+                            <li><a href="si.html">시스템 구축</a></li>
+                            <li><a href="app.html">앱 개발</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">문의하기</a></li>
+                </ul>
+            </nav>
+            <a class="btn-menuall"><span></span></a>
+        </div>        
+    </header>
+    <main>
+        <!-- 본문 시작 -->
+        <section class="business">
+            <h2 class="sub-title">
+                <p class="indicator"><i class="xi-home-o"></i> <i class="xi-angle-right-thin"></i> 문의하기</p>
+                문의하기
+            </h2>
+            <div id="contact">
+                <section class="contact">
+                    <div class="contact-inner">
+                        <form action="">
+                            <h3 class="sub-title">
+                                <p>프로젝트 정보를<br> 상세하게 남겨주시면 빠르게<br> 연락 드리겠습니다.
+                                    <span>(※ 고객님께서 제공한 모든 정보는 무단으로 제3자에게 제공하지 않습니다.)</span>
+                                </p>
+                            </h3>
+                            <article>
+                                <label>문의유형
+                                    <select name="" id="">
+                                        <option value="">문의유형 선택</option>
+                                        <option value="">솔루션 구축문의</option>
+                                        <option value="">SI문의</option>
+                                        <option value="">차량관제 솔루션(전령이지)</option>
+                                        <option value="">BI 솔루션(차트이지)</option>
+                                        <option value="">IOT 클라우드 서비스(싱크이지)</option>
+                                        <option value="">PHOS(미들웨어)</option>
+                                        <option value="">B2C 문의</option>
+                                        <option value="">기타 문의</option>
+                                    </select>
+                                </label>
+                                <label>방문경로
+                                    <input type="text" placeholder="방문경로">
+                                </label>
+                                <label>회사명
+                                    <input type="text" placeholder="회사명">
+                                </label>
+                                <label>담당자명, 직위<em>*</em>
+                                    <input type="text" placeholder="담당자명, 직위 입력" required>
+                                </label>
+                                <label>연락처<em>*</em>
+                                    <input type="tel" placeholder="연락처 (ex. 010-0000-0000)" required>
+                                </label>
+                                <label>이메일<em>*</em>
+                                    <input type="email" placeholder="이메일" required>
+                                </label>
+                                <label>문의 내용<em>*</em>
+                                    <textarea placeholder="프로젝트에 대해 문의하실 내용을 입력해주세요." required></textarea>
+                                </label>
+                                <button type="submit" class="btn-primary">문의하기</button>
+                            </article>
+                        </form>
+                    </div>
+                </section>
+                <section class="map">
+                    <div class="map-inner">
+                        <form action="">
+                            <article class="contact">
+                                <p><i class="xi-call"></i> <em>02-3432-7723</em></p>
+                                <p><i class="xi-fax"></i> <em>0303-0333-8142</em></p>
+                                <p><i class="xi-my-location"></i> <em>경기도 성남시 분당구 판교로 253, B-1001 (삼평동, 이노밸리)</em>
+                                        <em>지번 : 경기도 성남시 분당구 삼평동 621 판교 이노밸리 B동 1001호</em></p>
+                            </article>
+                        </form>
+                    </div>
+        
+                    <!-- * 카카오맵 - 지도퍼가기 -->
+                    <!-- 1. 지도 노드 -->
+                    <div id="daumRoughmapContainer1706748186461" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+        
+                    <!--
+                        2. 설치 스크립트
+                        * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+                    -->
+                    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+        
+                    <!-- 3. 실행 스크립트 -->
+                    <script charset="UTF-8">
+                        new daum.roughmap.Lander({
+                            "timestamp" : "1706748186461",
+                            "key" : "2hwvv",
+                            "mapWidth" : "700",
+                            "mapHeight" : "500"
+                        }).render();
+                    </script>
+                </section>
+            </div>
+        </section>
+        <!-- //본문 끝 -->
+    </main>
+    <footer id="footer">        
+        <button class="btn-top"><i class="xi-long-arrow-up"></i>TOP</button>
+        <div class="footer-inner">
+            <div class="footer-company">
+                <div>
+                    <p>상호 : (주)트리포스</p>
+                    <p>대표 : 서형호</p>
+                    <p>사업자등록번호 : 220-86-64863 </p>
+                </div>
+                <p><a href="privacy.html">개인정보처리방침</a></p>
+            </div>
+            <address>
+                경기도 성남시 분당구 판교로 253, B-1001 (삼평동, 이노밸리)<br>
+                지번주소 : 경기도 성남시 분당구 삼평동 621 판교 이노밸리 B동 1001호
+            </address>
+            <p class="copyright">ⓒTRIPHOS Corp. all rights reserved.</p>
+        </div>        
+    </footer>
+</body>
+</html>

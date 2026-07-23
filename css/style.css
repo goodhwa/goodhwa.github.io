@@ -1,0 +1,316 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+/******* 각 페이지별 *******/
+
+/* 메인 */
+.wrap {width:100vw; overflow:clip;}
+.main-visual {position:relative; z-index:1; height:100vh; width:100vw; background:#121213;}
+.main-visual .inner-box {position:absolute; left:50%; top:50%; transform:translate(-50%, -50%); text-transform:uppercase; color:#fff; transition:1s; }
+.main-visual .inner-box .top-area {clip-path: inset(0 -100% calc(50% - 1px) -100%);}
+.main-visual .inner-box .bottom-area {position:absolute; top:0; clip-path:inset(calc(50% - 1px) -100% 0 -100%);}
+.main-visual .txt-small {font-size:clamp(1.4rem, 0.93vw + 0.5rem, 2rem); color:#fff; }
+.main-visual .txt-small:nth-of-type(1) {margin-left: -6.5%; margin-bottom:2.4%;}
+.main-visual .txt-small.last {margin-left:50%; margin-top:2.4%; opacity:0; transform:translateX(2rem); transition:.6s;}
+.main-visual .txt-small.last.show {margin-left:50%; margin-top:4%; line-height:1.7; opacity:1; transform:translateX(0);}
+.main-visual .title br {display:none}
+.main-visual .title p {width:max-content; margin:-4% 0; font-size:clamp(4rem, 5.31vw + 1rem, 13.2rem); line-height:1.2; font-weight:800; white-space:nowrap;}
+.main-visual .title p:nth-of-type(1) {margin-left:-7%}
+.main-visual .title p:nth-of-type(2) {margin-left:15%;}
+
+.typing .char {position:relative; display:inline-block; margin:0 -0.01%; opacity:0; transform:translateY(2rem); }
+.typing .char::after {content:''; position:absolute; display:block; background-size: cover; background-repeat: no-repeat; background-position:center center;
+  opacity:0; transform:translate(-50%, -50%) scale(0.95); transition:opacity 1s ease .8s, transform 0.8s ease .7s; }
+.typing.show .char::after {opacity:1; transform:translate(-50%, -50%) scale(1)}
+.char[style*="--char-index: 0"]::after {left:-30%; bottom:-40%; width:min(10.9rem, 5.677vw); height:min(10.9rem, 5.677vw); background-image: url('../images/main_design.svg') }
+.char[style*="--char-index: 8"]::after {left:160%; top:50%; transform:translate(-50%,-50%); width:min(10.7rem, 5.573vw); height:min(10.7rem, 5.573vw); background-image: url('../images/main_design2.svg') }
+.char[style*="--char-index: 16"]::after {left:582%; top:20%; transform:translate(-50%,-50%); width:min(20.96rem, 6.718vw); height:min(20.96rem, 6.718vw); background-image: url('../images/main_beauty.svg') }
+.char[style*="--char-index: 25"]::after {left:-140%; bottom:-50%; transform:translate(-50%,0); width:min(10.8rem, 5.625vw); height:min(10.7rem, 5.573vw); background-image: url('../images/main_abstract.svg') }
+.char[style*="--char-index: 38"]::after {bottom:10%; left:200%; width:min(12.1rem, 6.302vw); height:min(6.2rem, 3.23vw); background-image:url('../images/main_code.svg')}
+
+.main-who {position:sticky; top:0; width:100vw; height:100vh;}
+.main-who .bg {position:relative; width:100vw; height:100vh; background:url(../images/bg_who.webp) no-repeat center center / cover; }
+.main-who .inner-box {position:absolute; top:0; display:flex; align-items: center; justify-content: center; width:100%; height:100%; }
+.main-who .who-txt {text-transform: uppercase; text-align: center; opacity:0}
+.main-who .who-txt h2 {margin-bottom:1rem; font-weight: 700; font-size:clamp(2rem, 1.56vw + 0.5rem, 4.8rem)}
+.main-who .who-txt p {font-weight: 800; font-size:clamp(3rem, 5.12vw + 1rem, 12.8rem); line-height: 1.1;}
+.main-who .who-txt .more {margin-top:5%}
+.main-who .preferred-list {position:absolute; display:flex; justify-content:center; gap:7.5%; width:100%; transform:translateY(150%)}
+.main-who .preferred-list figure {position:relative; height:100%; min-width:11rem; padding:3%; background-color:rgba(255,255,255,.55); 
+    border-radius:0.8rem; backdrop-filter:blur(15px); -webkit-backdrop-filter:blur(15px); transition:.8s;}
+.main-who .preferred-list figure:first-child {margin-top:32.5rem}
+.main-who .preferred-list figure:nth-child(2) {margin-top:65rem}
+.main-who .preferred-list figure:nth-child(4) {margin-top:94rem}
+.main-who .preferred-list figcaption {margin-top:5%;color:#111; font-size:clamp(1.4rem, 1.03vw + 0.5rem, 2.2rem); text-transform:uppercase; text-align:center;}
+
+.main-list {position:relative; padding:max(5rem, 10.4%) 0; margin-top:300vh; margin-bottom:6rem; background-color: #fff; }
+.main-list .title, .work-list .title {margin:auto; font-weight:800; font-size: clamp(3rem, 5.12vw + 1rem, 12.8rem); text-transform:uppercase; max-width:192rem;}
+.main-list .inner {display:grid; grid:35.6% 14.3% 17.1% 32.7% / repeat(8, 1fr); gap:0.2rem; max-width:192rem; margin:auto;}
+.main-list .inner > article {position:relative; margin-bottom:0}
+.main-list .inner > article:first-child {grid-area:1/1/2/6;}
+.main-list .inner > article:nth-child(2) {grid-area:1/6/3/9; margin-right:16%}
+.main-list .inner > article:nth-child(3) {grid-area:2/3/4/6;}
+.main-list .inner > article:nth-child(4) {grid-area:4/5/5/9;}
+.main-list .inner a img {transition:.5s; transform-origin:center bottom; border-radius:0.8rem;}
+.main-list .inner a .hover {position:absolute; z-index:1; left:0%; bottom:0; opacity:0; transition:opacity .5s}
+.main-list .inner a:hover .hover {opacity:1}
+.main-list .inner a:hover img {transform:scale(.97);}
+.main-list .inner figure figcaption {position:absolute; bottom:calc(-3% - 56px); left:3%; text-transform:uppercase; font-size:2rem}
+.main-list .inner figure figcaption span {display:block; font-size:80%; color:#767676; text-transform:none; font-size:1.7rem}
+.main-list .more {margin-left:max(3%, 2rem)}
+
+@media (max-width:1600px) {
+    .main-who .preferred-list {gap:2%; width:calc(100% -  4rem); margin:0 2rem}
+}
+@media (max-width:768px) {
+    .main-visual .txt-small.last.show { margin-left:-25%; text-align:center;}
+    .char[style*="--char-index: 25"]::after {left:-245%; bottom:-50%}
+    .main-visual .title br {display:block}
+    .main-visual .title p {margin:0}   
+    .main-visual .title p:nth-of-type(2) {margin-left:0; text-align:left;}
+    .main-visual .title p:nth-of-type(2) .word:nth-of-type(2) {margin-left:-13%}
+    .main-visual .title p:nth-of-type(3) .word:nth-of-type(1) {margin-left:15%}
+    .main-visual .title p :is(.word, .whitespace) {display:inline-flex; margin:-4% 0;}
+    .char[style*="--char-index: 16"]::after {top:50%;}
+
+    .main-who .preferred-list {gap:0}
+    .main-who .preferred-list figure:first-child {transform:translateX(11rem)}
+    .main-who .preferred-list figure:nth-child(2) {transform:translateX(5rem)}
+    .main-who .preferred-list figure:nth-child(4) {transform:translateX(-12rem)}
+
+    .main-list .inner {grid:23% 31.6% 20.8% 19.6% / repeat(8, 1fr); gap:2rem}
+    .main-list .inner > article:first-child {grid-area:1/1/2/9;}
+    .main-list .inner > article:nth-child(2) {grid-area:2/5/3/9; margin-right:0}
+    .main-list .inner > article:nth-child(3) {grid-area:3/1/4/6;}
+    .main-list .inner > article:nth-child(4) {grid-area:4/3/5/9;}
+    .main-list .inner figure figcaption {bottom:calc(-3% - 36px); left:2rem; font-size:1.4rem}
+    .main-list .inner figure figcaption span {font-size:1.2rem}
+    .main-list .inner > article:nth-child(2) figure figcaption {left:auto; right:10%; text-align:right;}
+    .main-list .more {margin-top:14%}
+}
+
+/* about */
+.about-visual {position:relative; display:flex; align-items:center; justify-content:center; height:100vh; width:100vw; background-color:#fff;}
+.about-visual .inner-box {display:flex; align-items:center; justify-content:center; margin:0 max(3%, 2rem); text-transform:uppercase; color:#111; transition:1s}
+.about-visual .inner-box .scale-image {width:min(77.7rem, calc(100% - 4rem)); max-width:40%; border-radius: 0.8rem;}
+.about-visual .title {position:relative; z-index:1; margin-right:-5.5%;}
+.about-visual .title p {width:max-content; margin:-4% 0; font-size:clamp(4rem, 5.31vw + 1rem, 13.2rem); line-height:1.2; font-weight:800; white-space:nowrap;}
+.about-visual .title p:nth-of-type(1) {margin-left:55%}
+.about-visual .title p:nth-of-type(3) {margin-left:30%;}
+.about-visual .title p:nth-of-type(4) {margin-left:10%;}
+
+.about-who {margin:max(5rem, 10.4%) 0}
+.about-who .inner-box {display:flex; justify-content:center; gap:6.5rem;}
+.about-who .who-img {width:min(32.3rem, 100%); border-radius:0.8rem}
+.about-who .who-img img {border-radius:0.8rem}
+.about-who .who-txt {margin-right:5.5%; font-size:1.6rem}
+.about-who .who-txt .who-detail {font-size:2.2rem}
+.about-who .who-txt h3 {margin-top:12%; margin-bottom:1%;}
+.about-who .who-txt .list {line-height:2;}
+.about-who .who-txt span {margin-right:0.8rem; color:#767676}
+
+@media (max-width:768px) {
+    .about-visual {padding-top:30%;}
+    .about-visual .inner-box, .about-who .inner-box {flex-direction: column;}
+    .about-visual .inner-box img {max-width:100%}
+    .about-visual .title {margin-right:2rem; margin-bottom:-9rem;}
+    .about-visual .title p {font-size:clamp(3rem, 5.31vw + 1rem, 13.2rem)}
+    .about-visual .title p:nth-of-type(1) {margin-left:35%}
+    .about-visual .title p:nth-of-type(3) {margin-left:10%;}
+    .about-visual .title p:nth-of-type(4) {margin-left:0%;}
+    .about-who .who-txt .who-detail {font-size:1.8rem}
+    .about-who .who-txt {font-size:1.4rem}
+}
+
+/* work */
+.work-list {position:relative; padding:max(5rem, 10.4%) 0; margin-bottom:6rem; background-color:#fff; max-width: 192rem; margin:auto}
+.work-list .tab {display:flex; align-items:center; gap:2%; padding:2% 1%; font-size:clamp(2rem, 1.1vw + 0.5rem, 2.6rem)}
+.work-list .inner {display:flex; flex-wrap:wrap; gap:0.2rem}
+.work-list .inner article {position:relative; width:calc(50% - 0.1rem); aspect-ratio:2/1.12; margin-bottom:min(18rem,6%); opacity:1; transition:opacity 0.5s ease;}
+.work-list .inner article .hover {position:absolute; z-index: 1; left:50%; bottom:0; transform: translate(-50%,-8%); max-width:94%; opacity:0; transition:opacity .6s}
+.work-list .inner article:hover .hover {opacity:1;}
+.work-list .inner article figure img {transition:.5s; border-radius:0.8rem}
+.work-list .inner article:hover figure img {transform:scale(.97);}
+.work-list .inner article.hide {opacity:0; pointer-events: none; position:absolute}
+.work-list .inner article figcaption {position:absolute; left:0; bottom:0; width:100%; padding:2%; background-color:#fff; text-transform:uppercase; font-size: 2rem;}
+.work-list .inner article figcaption span {display:block; font-size:80%; color:#767676; text-transform:none; font-size:1.7rem}
+
+@media (max-width:768px) {
+    .work-list .inner article {width:100%}
+    .work-list .inner article figcaption {padding:1.6rem; font-size:1.4rem}
+    .work-list .inner article figcaption span {font-size:1.2rem}
+}
+
+
+/* freshway */
+.freshway {background-color:#72d39e;}
+.freshway .erp {border-radius:0 0 8rem 8rem; background-color:#defbeb;}
+.freshway .erp + .mobile {margin-top:max(-30%,-60rem); }
+.freshway .erp article.col1:after {content:''; position:absolute; z-index:-1; left:4%; bottom:-55%; display:block; width:66%; height:71%; background:url(../images/shuttle/shuttle-bg.png) no-repeat left top / contain; opacity:.3}
+.freshway .bg-figure, .freshway .bg-figure2 {position:relative}
+.freshway .bg-figure:before {content:''; position:absolute; z-index:-1; top:18%; right:-15%; width:28%; height:24.7%; background:url(../images/freshway/fresh-figure01.png) no-repeat 0 0 /contain}
+.freshway .bg-figure2:before {content:''; position:absolute; z-index:-1; top:10%; left:-3%; width:12.1%; height:10.7%; background:url(../images/freshway/fresh-figure02.png) no-repeat 0 0 /contain}
+.freshway .bg-figure2:after {content:''; position:absolute; z-index:-1; bottom:-10%; left:28%; width:28%; height:20%; background:url(../images/freshway/fresh-figure03.png) no-repeat 0 0 /100% 100%}
+.freshway .title-txt2:before {content:'Logistics'; top:19%; left:20%; color:rgba(255,255,255,0.16); }
+.freshway .title-txt2:after {content:' center'; top:32%; left:59%; color:rgba(255,255,255,0.16)}
+
+/* ilyang */
+.ilyang {background-color:#eaf1ff;}
+.ilyang .pc figure, .ilyang .mobile figure {border-color:#fff}
+.ilyang .erp, .ilyang .bg-oblique {position:relative;}
+.ilyang .erp:before {content:''; position:absolute; z-index:-1; top:52.5%; left:50%; display:block; width:min(192rem, 100vw); height:min(120.6rem, 78vw); background:url(../images/bus/bus_bg.png) no-repeat 0 0 / cover; transform:translate(-50%,-50%); opacity:.7}
+.ilyang .title-txt, .bus .title-txt2 {position:relative; z-index:1; color:#dce6f4;}
+.ilyang .title-txt:before {content:'Work'; top:7%; left:-34%}
+.ilyang .title-txt:after {content:'Productivity'; top:38%; left:-10%}
+.ilyang .bg-figure:before {content:''; position:absolute; z-index:-1; top:-12%; right:-8%; width:58%; height:54.7%; background:url(../images/ilyang/bg-summary.png) no-repeat 0 0 /contain; transform:rotate(180deg)}
+.ilyang .sub-explain {color:var(--color-background)}
+
+@media (max-width:1600px) {
+    .ilyang .erp:before {top:59.6%}
+}
+@media (max-width:768px) {
+    .ilyang .bus-img:after {width:38%; }
+}
+
+/* saas */
+.saas {background-color:#dcdeff;}
+.saas .erp, .saas .circle-txt {position:relative}
+.saas .erp:before {content:''; position:absolute; z-index:-1; top:50.7%; left:50%; display:block; width:min(300rem, 100vw); height:min(40.5rem, 24.58vw); background:url(../images/freshway/freshway_bg.png) no-repeat 0 0 / cover; transform:translate(-50%,-50%); opacity:.7}
+.saas .pc figure, .saas .mobile figure, .saas .pc .col1.long figure:before, .saas .mobile figure.long:before {border-color:#ccc}
+.saas .peaking {position: relative; padding-top:min(30rem, 20%); }
+.saas .peaking:before {content:'User App'; position:absolute; top:16%; left:50%; transform:translate(-50%,0); font-family: "Playfair Display", serif; font-size:clamp(9rem, 16vw, 28.5rem); color:#c7c9ee; white-space: nowrap;}
+.saas .circle-txt:after {content:''; position:absolute; bottom:33%; right:-7%; width:14.6vw; height:14.6vw; background:url(../images/freshway/fresh-txt.png) no-repeat 0 0 /100% 100%}
+.saas .mt-minus {margin-top:-80%}
+
+@media (max-width:768px) {
+    .saas .peaking:before {top:12%}
+}
+
+/* 승강기기술원 */
+.elevator {background:#fff url(../images/elevator/elevator_bg.jpg) no-repeat center top / contain;}
+.elevator > section:first-child {padding:min(84rem, 45%) 0 min(30rem, 20%) 0; }
+.elevator .pc figure, .elevator .mobile figure, .elevator .pc .col1.long figure:before, .elevator .mobile figure.long:before {border-color:#d2d2d2}
+.circle-bg {position:relative}
+.circle-bg:before {content:''; position:absolute; top:10%; left:16%; z-index:-1; display:block; width:min(21.6rem, 12vw); height:min(21.6rem, 12vw); border-radius:50%; background-color:#fbc84c;}
+.circle-bg:after {content:''; position:absolute; bottom:7%; right:-13%; z-index:-1; display:block; width:min(48.6rem, 26vw); height:min(48.6rem, 26vw); border-radius:50%; background-color:#b0dbec;}
+.elevator .title-txt:before {content:'Elevator Safety '; top:2%; left:-19%; width:60%; line-height:1.1; text-align:right; font-size:clamp(6rem, 10.5vw, 20.5rem)}
+.elevator .title-txt:after {content:'Technology Institute'; top:29%; left:-43%; width:100%; line-height:1.1; text-align:right; font-size:clamp(6rem, 10.5vw, 20.5rem)}
+.bg-gray {padding-top:min(30rem, 20%); background-color:#f7f7f7;}
+.elevator .bg-blue {position:relative; padding-top:0}
+.elevator .bg-blue:before {content:''; position:absolute; height:60%; width:100vw; margin-top:7%; background-color:#165899;}
+.elevator .mt-minus {padding-top:0; margin-top:max(-36%,-76rem)}
+
+
+/* 청호 */
+.chunho {background:linear-gradient(180deg, #0653a3 0%, #e9f7f8 30%)}
+.chunho .sub-explain.all, .chunho .sub-explain.all em {color:#fff}
+.chunho .erp, .chunho .erp + .col2 {position:relative}
+.chunho .erp:before {content:''; width:12%; height:27.3%; position:absolute; top:-14%; right:-2%; background:url(../images/chunho/chuho_bg.png) no-repeat 0 0 / cover;}
+.chunho .erp:after {content:''; width:5%; height:11.2%; position:absolute; bottom:22%; left:-6%; background:url(../images/chunho/chuho_bg.png) no-repeat 0 0 / cover;}
+.chunho .erp > figure {position:relative; z-index:1;}
+.chunho .mt-minuse {margin-top:max(-30%,-60rem)}
+.chunho .erp + .col2:before {content:''; width:6vw; height:7vw; position:absolute; top:10%; left:40%; background:url(../images/chunho/chuho_bg.png) no-repeat 0 0 / cover;}
+.chunho .card-wrap {position:relative; margin-top:50vw; background-color:#20adb7; overflow:visible;}
+.chunho .card-wrap:before {content:''; position:absolute; top:-50vw; display:block; width:100vw; height:100vw; border-radius: 50%; background-color:#20adb7;}
+.chunho .sub-txt {position:absolute; top:-40vw; left:50%; transform:translate(-50%, 0); color:#0652a3; font-family: "Playfair Display", serif; font-size:clamp(9rem, 16vw, 28.5rem); }
+.chunho .sub-txt span {display:block;}
+.chunho .sub-txt span:last-child {margin-top:-10%; margin-left:14%}
+.chunho .card {position:absolute; z-index:1; top:-8%; left:50%; gap:15%; transform:translate(-50%,0);}
+.chunho .card + .col3 {margin-top:-10vw}
+.chunho .card figure {width:min(67rem, 36.38vw); margin-bottom:9%; border:0; border-radius:0; box-shadow:none;}
+
+@media (max-width:768px) {
+    .chunho .erp:before {right:-2rem}
+    .chunho .card {top:0}
+    .chunho .card + .col3 {margin-top:-5%}
+}
+
+
+
+/* 과학교육원 */
+/* .science {background:#303132 url(../images/science/science-bg.jpg) no-repeat center top / contain;}
+.science .double figure:last-child {margin-top:23%; margin-left:-12%}
+.science .pc .col1.long figure:before, .science section:first-child figure, .science section:nth-child(2) figure {border-color:#fff}
+.science .bann article:nth-child(odd) {margin-left:-10%}
+.science .bann article:nth-child(even) {margin-right:-10%}
+.science .sub-explain {color:#fff}
+.science .mobile {position:relative; background-color:#fff;}
+.science .mobile::before {content:''; position:absolute; top:0; right:0; left:0; height:8%; background-color:#303132;}
+.science .mobile .col1 {position:relative; z-index:1;}
+.science .mt-minus {position:relative; margin-top:-50%}
+.science .title-txt:before {content:'Science Education '; z-index:-1; top:22vw; right:-12vw; width:100%; line-height:1; text-align:right; font-size:clamp(8rem, 16vw, 26rem) }
+.science .title-txt2:before {content:'Science'; z-index:-1; bottom:4%; right:-26%; text-align:right; color:#dedede; font-size:clamp(8rem, 16vw, 26rem)}
+.science .title-txt2:after {content:'Training'; z-index:-1; bottom:-21%; left:-3vw; color:#dedede; font-size:clamp(8rem, 16vw, 26rem)}
+.science .bg-gray {position:relative; margin-top:max(-37%, -69rem); padding-top:0;}
+.science .bg-gray article:first-child {padding-top:37%}
+
+@media (max-width:1560px) {
+    .science .bann article:nth-child(odd) {margin-left:10%}
+    .science .bann article:nth-child(even) {margin-right:10%}
+    .science .bann article.sub-explain {margin-left:0%}
+} */
+
+/* 홈페이지 */
+.hp {background:#f7f7f7}
+.hp .sub-explain.all, .hp .sub-explain em {color:#fff}
+.hp .erp:before {content:''; position:absolute; z-index:-1; top:48%; left:50%; display:block; width:min(192rem, 100vw); height:min(38.5rem, 22.58vw); background:url(../images/hp/hp_bg.png) no-repeat 0 0 / cover; transform:translate(-50%,-50%); opacity:.7}
+.hp .double figure:last-child {margin-top:10%; margin-left:-12%}
+.hp .triphos {background:url(../images/hp/triphos_bg.jpg) no-repeat center top / contain;}
+.hp figure, .hp .col1.long figure:before  {border-color:#111}
+.hp .mt-minus {margin-top:max(-65%,-120rem)}
+.hp .title-txt:after {content:'Company Homepage'; top:26%; left:-32%; width:100%; line-height:1.1; text-align:right; font-size:clamp(6rem, 10.5vw, 20.5rem)}
+.hp .title-txt2:before {content:'Responsive Web'; top:2%; left:-21%; width:60%; line-height:1.1; text-align:right; font-size:clamp(6rem, 10.5vw, 20.5rem)}
+.hp .title-txt3:before {content:'One Page'; top:0%; left:4%; line-height:1.1; text-align:right; font-size:clamp(6rem, 10.5vw, 20.5rem); color:rgba(255,255,255,.2)}
+.hp .bg-dark {padding-top:min(30rem, 20%); border-top-left-radius:26rem; background-color:#433b4c;}
+.hp .bg-dark figure {border-color:#fff}
+.hp .mt-minus {margin-top:max(-30%,-60rem)}
+
+@keyframes moving2 {
+    0% {transform:translateY(0)}
+    100% {transform:translateY(-76% )}
+}
+
+/* 기타 앱*/
+/* .app {background:#4b4b4b url(../images/app_etc/buchon_bg.png) no-repeat center top / contain;} */
+.app {background-image:url(../images/app_etc/buchon_bg.png), linear-gradient(to bottom, #4b4b4b 40%, #384742, #4b4b4b 70%); background-repeat:no-repeat; background-size:contain}
+.app .mt-minus {position:relative; margin-top:-50%;}
+.app .title-txt:before {content:'Improved Work Productivity'; z-index:-1; top:22vw; left:-12vw; width:100%; line-height:1; text-align:right; font-size:clamp(8rem, 16vw, 26rem); color:#747677 }
+.app .parm.title-txt:before {content:'PDA  Work'; top:13%; left:40%; text-align:left;}
+.app .title-txt2:before {content:'Coupon'; z-index:-1; bottom:50%; right:-26%; text-align:right; color:rgba(0,0,0,0.16); font-size:clamp(8rem, 16vw, 26rem)}
+.app .title-txt2:after {content:'Approval'; z-index:-1; bottom:20%; left:-3vw; color:rgba(0,0,0,0.16); font-size:clamp(8rem, 16vw, 26rem)}
+.app .bg-orange {margin:2rem 2rem 0; padding-top:min(30rem, 20%); border-radius:8rem; background-color:#f99f47}
+.app .bg-orange article.align-top:before {content:''; position:absolute; right:0; top:-25%; display:block; width:23%; height:44%; background:url(../images/app_etc/coffee.png) no-repeat right top / contain;}
+.app .bg-orange article.align-top:after {content:''; position:absolute; left:0; bottom:15%; display:block; width:12%; height:26%; background:url(../images/app_etc/icream.png) no-repeat left top / contain;}
+
+
+/* cms */
+.cms {background:#1a1f53 url(../images/cms/cms_bg.jpg) no-repeat center top / contain;}
+.cms .bg-blue {position:relative}
+.cms .pc figure, .cms .mobile figure {border-color:#999}
+.cms .bg-blue:before {content:''; position:absolute; top:min(10rem, 0%); display:block; width:100vw; height:50vw; background:linear-gradient(180deg, #1a1f53 10%, #f7f7f7 80%)}
+.cms .title-txt {font-size:0;}
+.cms .title-txt:before {content:'Dash-'; z-index:-1; top:0vw; left:-3vw; font-size:clamp(8rem, 16vw, 26rem); color:rgba(255,255,255,0.16) }
+.cms .title-txt:after {content:'board'; z-index:-1; top:14vw; right:32vw; font-size:clamp(8rem, 16vw, 26rem); color:rgba(255,255,255,0.16) }
+.cms .title-txt2:before {content:'CMS'; z-index:-1; top:32%; right:25%; font-size:clamp(8rem, 16vw, 26rem);  }
+.cms .title-txt2:after {content:''; position:absolute; right:16%; top:8%; display:block; width:16%; height:41%; background:url(../images/cms/gear.png) no-repeat right top / contain; opacity:.3}
+.cms .mt-minus {margin-top:max(-45%, -39rem)}
+.cms .bg-gray + .bg-gray {padding-top:min(30rem, 28%)}
+
+
+/* 배너 기타*/
+.etc-ban {background-color:#1a639f;}
+.etc-ban .title-txt, .etc-ban .title-txt2 {font-size:0}
+.etc-ban .title-txt:before {content:'Vr Tour'; top:7%; right:12%; color:rgba(255,255,255,0.16); font-size:clamp(10rem, 16vw, 26rem)}
+.etc-ban .title-txt:after {content:'Kiosk'; top:65%; right:29%; color:rgba(255,255,255,0.16); font-size:clamp(10rem, 16vw, 26rem);}
+.etc-ban .hospital {position:relative; background-color:#65b7b4; border-radius:8rem; overflow:visible;}
+.etc-ban .hospital:before {content:''; position:absolute; display:block; width:100vw; height:min(30rem, 20%); border-radius:0 0 8rem 8rem;}
+.etc-ban .hospital + section {padding-top: min(30rem, 20%); }
+.etc-ban .hospital article figure {flex:none}
+.etc-ban .title-txt2:before {content:'Beautiful Key'; top:-34%; right:35%; width:46%; line-height:1.1; color:rgba(0,0,0,0.1); text-align:right; font-size:clamp(10rem, 16vw, 26rem);}
+.etc-ban .title-txt2:after {content:'Visual'; top:67%; right:25%; color:rgba(0,0,0,0.1); font-size:clamp(10rem, 16vw, 26rem);}
+.etc-ban .bg-flower {position:relative}
+.etc-ban .bg-flower:before {content:''; position:absolute; z-index:-1; left:27%; top:-5%; display:block; width:19%; height:12%; background:url(../images/etc/flower2.png) no-repeat right top / contain;}
+.etc-ban .bg-flower:after {content:''; position:absolute; z-index:-1; right:42%; bottom:1%; display:block; width:19%; height:12%; background:url(../images/etc/flower2.png) no-repeat right top / contain;}
+.etc-ban .bg-flower article:before {content:''; position:absolute; z-index:-1; right:-6%; top:4%; display:block; width:11%; height:8%; background:url(../images/etc/flower.png) no-repeat right top / contain;}
+.etc-ban .bg-flower article:after {content:''; position:absolute; z-index:-1; left:40%; bottom:24%; display:block; width:11%; height:8%; background:url(../images/etc/flower.png) no-repeat right top / contain; transform:rotate(113deg)}
